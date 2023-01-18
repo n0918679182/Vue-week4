@@ -18,7 +18,7 @@ export default {
                             </li>
                                                 <!-- 判斷若無前一頁(後端回傳boolean) 則加上 disabled -->
                             <li class="page-item" :class="{ disabled: !pages.has_next }">
-                                <a class="page-link" href="#" aria-label="Next">
+                                <a class="page-link" href="#" aria-label="Next" @click.prevent="getData(pages.current_page+1)">
                                     <span aria-hidden="true">&raquo;</span>
                                 </a>
                             </li>
